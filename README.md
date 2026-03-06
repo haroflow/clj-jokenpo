@@ -10,10 +10,11 @@ A few implementations of the classic Jokenpo (rock, paper, scissors) game:
 
 **TODO**: Replicant / Nexus / Portfolio.
 
-Game logic in a shared .cljc file.
-Frontend with shadow-cljs.
-Clojure Tests with lambdaisland/kaocha.
-CLI uberjar build sample with tools.build.
+Other details:
+- Game logic in a shared .cljc file.
+- Frontend with shadow-cljs.
+- Clojure Tests with lambdaisland/kaocha.
+- CLI uberjar build sample with tools.build.
 
 *Disclaimer: I'm currently learning Clojure/ClojureScript, so these might not be good representations of the language and best practices.*
 
