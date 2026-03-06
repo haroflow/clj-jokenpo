@@ -4,8 +4,8 @@
    [jokenpo.logic :as logic]))
 
 (defn read-option! []
-  (let [opcao (read-line)]
-    (case opcao
+  (let [option (read-line)]
+    (case option
       "r" :rock
       "p" :paper
       "s" :scissors

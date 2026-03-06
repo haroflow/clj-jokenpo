@@ -37,9 +37,9 @@
 
 (rf/reg-event-fx
  :player-selected-option
- (fn [{:keys [db]} [_ opcao-keyword]]
+ (fn [{:keys [db]} [_ option-keyword]]
    {:db (assoc db
-               :player-choice opcao-keyword
+               :player-choice option-keyword
                :text "...")
     :dispatch [:animate-computer-choice 0 (+ 25 (rand-int 25))]}))
 
