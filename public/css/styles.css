@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+}
+
+.options {
+    display: flex;
+}
+
+.option {
+    min-width: 250px;
+    min-height: 250px;
+    overflow: hidden;
+    border: 1px solid #CCC;
+    border-radius: 15px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.option.clickable {
+    cursor: pointer;
+    pointer-events: all;
+    transition: filter 300ms;
+}
+
+.option.clickable:hover {
+    filter: brightness(120%);
+    transition: filter 300ms;
+}
+
+.option.selected {
+    filter: brightness(120%);
+    box-shadow: 0 0 10px 0px rgb(228, 151, 35);
+}
+
+.option img {
+    width: 250px;
+    height: 250px;
+}
+
+#computer.option img {
+    display: none;
+}
+
+#computer.option img.visible {
+    display: inline-block;
+}

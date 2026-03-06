@@ -1,0 +1,32 @@
+{:deps {org.clojure/clojure {:mvn/version "1.12.0"}}
+
+ :paths ["src" "resources"]
+
+ :aliases
+ {;; clj -M:env/static:test
+  ;; For some reason kaocha tries to load static/core.clj after file changes even
+  ;;   though there are no tests for it, so env/static is needed here.
+  :test {:extra-deps {lambdaisland/kaocha {:mvn/version "1.91.1392"}}
+         :extra-paths ["test"]
+         :main-opts ["-m" "kaocha.runner" "--watch"]}
+
+  ;; clj -T:build/cli uber
+  :build/cli
+  {:replace-deps {io.github.clojure/tools.build {:mvn/version "0.10.12"}}
+   :ns-default build}
+
+  ;; clj -M:run/cli
+  :run/cli {:main-opts ["-m" "jokenpo.cli.core"]}
+
+  ;; clj -M:env/static:run/static
+  :env/static {:extra-deps {compojure/compojure {:mvn/version "1.7.2"}
+                            ring/ring-core {:mvn/version "1.15.3"}
+                            ring/ring-jetty-adapter {:mvn/version "1.15.3"}
+                            hiccup/hiccup {:mvn/version "2.0.0"}}}
+  :run/static {:main-opts ["-m" "jokenpo.static.core"]}
+
+  :env/frontend {:extra-deps {thheller/shadow-cljs {:mvn/version "3.3.5"}
+                              org.clojure/clojurescript {:mvn/version "1.12.134"}
+                              reagent/reagent {:mvn/version "2.0.1"}
+                              re-frame/re-frame {:mvn/version "1.4.4"}
+                              hiccups/hiccups {:mvn/version "0.3.0"}}}}}

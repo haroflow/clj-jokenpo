@@ -1,0 +1,10 @@
+.calva
+.clj-kondo
+.cpcache
+.lsp
+.shadow-cljs
+node_modules
+out
+public/js
+.nrepl-port
+target

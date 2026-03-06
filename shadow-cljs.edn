@@ -1,0 +1,13 @@
+{:dev-http {8080 "public"}
+ 
+ :deps {:aliases [:env/frontend]}
+
+ :builds
+ {:cljs {:target :browser
+         :modules {:main {:init-fn jokenpo.cljs.core/init}}}
+
+  :reagent {:target :browser
+            :modules {:main {:init-fn jokenpo.reagent.core/init}}}
+
+  :reframe {:target :browser
+            :modules {:main {:init-fn jokenpo.reframe.core/init}}}}}
