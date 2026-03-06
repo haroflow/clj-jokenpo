@@ -18,6 +18,8 @@ Other details:
 
 *Disclaimer: I'm currently learning Clojure/ClojureScript, so these might not be good representations of the language and best practices.*
 
+![demo](https://github.com/user-attachments/assets/c7ff43a4-254c-4f62-a5d4-ffd58849ae2f)
+
 ## Pre-requisites
 
 Developed on Windows 10, with:
