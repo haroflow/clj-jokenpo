@@ -7,8 +7,9 @@ A few implementations of the classic Jokenpo (rock, paper, scissors) game:
 - **CLJS**: Barebones ClojureScript with manual DOM manipulation.
 - **Reagent**: Minimalist React wrapper for CLJS.
 - **Reagent + Reframe**: Full state management using the dispatch/subscribe pattern.
+- **Replicant**: Top-down architecture focusing on pure functions and explicit side-effect handling, without React.
 
-**TODO**: Replicant / Nexus / Portfolio.
+**TODO**: Add Nexus / Portfolio to Replicant version.
 
 Other details:
 - Game logic in a shared .cljc file.
@@ -67,6 +68,13 @@ npx shadow-cljs watch reframe
 # Open browser on http://localhost:8080
 ```
 
+### Replicant
+```sh
+npm install
+npx shadow-cljs watch replicant
+# Open browser on http://localhost:8080
+```
+
 ## How to test
 
 Run and watch all tests (JVM):
@@ -92,11 +100,11 @@ Static website:
 - Evaluate `(start-dev-server!)`
 - Open browser on http://localhost:3000
 
-CLJS/Reagent/Reframe:
+CLJS/Reagent/Reframe/Replicant:
 - Jack-In
 - Select `deps.edn + shadow-cljs`
 - Select `:env/frontend` alias
-- Select one of the builds: `:cljs`, `:reagent` or `:reframe`
+- Select one of the builds: `:cljs`, `:reagent`, `:reframe` or `:replicant`
 - Select again the same build as before.
 - Open browser on http://localhost:8080 to connect the REPL
 - To check if everything works, you can try evaluating `(println "hello")`, it should print "hello" in the browser console.
