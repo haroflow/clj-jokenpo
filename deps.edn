@@ -29,4 +29,5 @@
                               org.clojure/clojurescript {:mvn/version "1.12.134"}
                               reagent/reagent {:mvn/version "2.0.1"}
                               re-frame/re-frame {:mvn/version "1.4.4"}
-                              hiccups/hiccups {:mvn/version "0.3.0"}}}}}
+                              hiccups/hiccups {:mvn/version "0.3.0"}
+                              no.cjohansen/replicant {:mvn/version "2025.12.1"}}}}}

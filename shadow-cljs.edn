@@ -10,4 +10,7 @@
             :modules {:main {:init-fn jokenpo.reagent.core/init}}}
 
   :reframe {:target :browser
-            :modules {:main {:init-fn jokenpo.reframe.core/init}}}}}
+            :modules {:main {:init-fn jokenpo.reframe.core/init}}}
+  
+  :replicant {:target :browser
+              :modules {:main {:init-fn jokenpo.replicant.core/init}}}}}
